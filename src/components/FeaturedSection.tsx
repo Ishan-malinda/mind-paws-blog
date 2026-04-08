@@ -33,7 +33,7 @@ export function FeaturedSection() {
           <Link to={`/article/${featuredPost.slug}`} className="group block">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden glass-card">
               <div className="relative aspect-[16/10] lg:aspect-auto overflow-hidden">
-                <img src={featuredPost.image} alt={featuredPost.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={featuredPost.image} alt={featuredPost.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--color-surface-card)]/30 hidden lg:block" />
               </div>
               <div className="p-8 md:p-12 lg:p-14 flex flex-col justify-center">

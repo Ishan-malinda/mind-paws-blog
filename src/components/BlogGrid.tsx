@@ -50,7 +50,7 @@ export function BlogGrid() {
             >
               <Link to={`/article/${post.slug}`} className="blog-card group block">
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-5">
-                  <img src={post.image} alt={post.title} className="card-image w-full h-full object-cover" />
+                  <img src={post.image} alt={post.title} className="card-image w-full h-full object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute top-4 left-4">
                     <span className="category-badge px-3 py-1 text-[10px] font-semibold tracking-wider uppercase rounded-full">

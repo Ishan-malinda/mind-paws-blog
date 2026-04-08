@@ -35,7 +35,7 @@ export function ArticlePage() {
   return (
     <div className="min-h-screen bg-[var(--color-surface)]">
       <div className="relative w-full h-[50vh] md:h-[65vh]">
-        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+        <img src={post.image} alt={post.title} className="w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-surface)] via-[var(--color-surface)]/40 to-[var(--color-surface)]/20" />
         <motion.button
           initial={{ opacity: 0, x: -20 }}
@@ -99,7 +99,7 @@ export function ArticlePage() {
               {relatedPosts.map((rp) => (
                 <Link key={rp.id} to={`/article/${rp.slug}`} className="blog-card group">
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-4">
-                    <img src={rp.image} alt={rp.title} className="card-image w-full h-full object-cover" />
+                    <img src={rp.image} alt={rp.title} className="card-image w-full h-full object-cover" loading="lazy" />
                   </div>
                   <span className="category-badge inline-block px-3 py-1 text-[10px] font-semibold tracking-wider uppercase rounded-full mb-2">
                     {rp.category}

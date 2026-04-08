@@ -26,6 +26,8 @@ export function Hero() {
           src="/images/hero.png"
           alt="Majestic mountain landscape"
           className="w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/70 via-transparent to-transparent" />

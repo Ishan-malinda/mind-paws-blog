@@ -13,7 +13,7 @@ export function DiscoverSection() {
     <section id="discover" ref={ref} className="relative bg-[var(--color-surface)] overflow-hidden">
       <div className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
-          <img src="/images/cherry.png" alt="Cherry blossom pathway" className="w-full h-full object-cover" />
+          <img src="/images/cherry.png" alt="Cherry blossom pathway" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/40" />
         </div>
@@ -47,7 +47,7 @@ export function DiscoverSection() {
               transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
             >
               <Link to="/articles" className="blog-card group block relative rounded-2xl overflow-hidden aspect-[3/4]">
-                <img src={cat.image} alt={cat.name} className="card-image absolute inset-0 w-full h-full object-cover" />
+                <img src={cat.image} alt={cat.name} className="card-image absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-[var(--color-accent)]/30 transition-colors duration-500 z-10" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 z-10">
