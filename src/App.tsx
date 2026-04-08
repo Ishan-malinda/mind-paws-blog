@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import { PostsProvider } from './context/PostsContext';
+import { PostsProvider, usePosts } from './context/PostsContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
@@ -20,6 +20,18 @@ function ScrollToTop() {
 function AppLayout() {
   const { pathname } = useLocation();
   const isAdmin = pathname.startsWith('/admin');
+  const { isLoading } = usePosts();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[var(--color-surface)]">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-[var(--color-accent)]/20 border-t-[var(--color-accent)] rounded-full animate-spin" />
+          <p className="text-white/40 text-sm font-serif italic">Loading stories...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
